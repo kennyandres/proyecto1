@@ -11,6 +11,7 @@ const articuloGet = async (req, res) => {
                 { descripcion: new RegExp(value, 'i') }
             ]
         })
+        //.populate('categoria','nombre')
         .sort({ "createAt": -1 })
     res.json({
         articulo

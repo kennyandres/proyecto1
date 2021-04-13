@@ -2,6 +2,7 @@ import compra from "../models/compra.js"
 
 const ExisteCompraById=async(id)=>{
     const existe=await compra.findById(id);
+    
 
     if(!existe){
         throw new Error(`El Id no existe ${id}`);

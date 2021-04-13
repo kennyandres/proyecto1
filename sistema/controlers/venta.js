@@ -23,6 +23,7 @@ const ventaGet = async (req, res) => {
                 {tipocomprobante:new RegExp(value,'i')}
             ]
         })
+        .populate('persona','nombre')
         .sort({ "createdAt": -1 })
     res.json({
         venta

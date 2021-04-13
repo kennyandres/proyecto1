@@ -56,7 +56,7 @@ export default {
         .then(function (response) {
           console.log(response.data);
           me.$store.dispatch("setToken", response.data);
-          me.$router.push("/inicio");
+          me.$router.push("/Home");
         })
         .catch(function ({ response }) {
           me.errors = response.data.msg;
